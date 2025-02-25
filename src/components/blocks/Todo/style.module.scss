@@ -1,0 +1,30 @@
+@use '/src/assets/styles/services/variables.scss' as *;
+.todo {
+	width: 100%;
+	background-color: $secondary-blue;
+	padding: 10px 14px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__text {
+		color: $primary-white;
+		max-width: 90%;
+		overflow: scroll;
+		font-size: 20px;
+	}
+
+	&__checkbox {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.completed {
+	background: rgba($color: $secondary-blue, $alpha: 0.7);
+	.todo__text {
+		color: $primary-gray;
+		pointer-events: none;
+	}
+}

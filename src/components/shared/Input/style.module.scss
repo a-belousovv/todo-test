@@ -1,0 +1,30 @@
+@use '/src/assets/styles/services/variables.scss' as *;
+.input {
+	padding: 14px 20px;
+	border-radius: 10px;
+	border: 2px solid $secondary-blue;
+	background: transparent;
+	font-family: $ubuntu;
+	outline: none;
+	color: $primary-white;
+	transition: 0.3s;
+	font-size: 20px;
+	&::placeholder {
+		color: rgba($color: $primary-white, $alpha: 0.5);
+	}
+	&:disabled {
+		color: rgba($color: $primary-white, $alpha: 0.5);
+	}
+}
+
+.input__black {
+	color: $primary-gray;
+
+	&::placeholder {
+		color: $secondary-gray;
+	}
+
+	&:disabled {
+		color: $primary-gray;
+	}
+}

@@ -1,0 +1,13 @@
+@use '/src/assets/styles/services/variables.scss' as *;
+.buttons {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.active {
+	background-color: $secondary-blue;
+}

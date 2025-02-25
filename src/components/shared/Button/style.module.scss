@@ -1,0 +1,14 @@
+@use '/src/assets/styles/services/variables.scss' as *;
+.button {
+	background-color: $primary-blue;
+	padding: 14px 32px;
+	border-radius: 10px;
+	color: $primary-white;
+	cursor: pointer;
+	transition: 0.3s;
+	border: 2px solid $secondary-blue;
+	font-size: 20px;
+	&:hover {
+		background-color: $secondary-blue;
+	}
+}
