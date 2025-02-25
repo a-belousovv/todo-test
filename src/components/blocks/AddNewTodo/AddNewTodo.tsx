@@ -4,7 +4,7 @@ import { Input } from '@/components/shared/Input/Input'
 import { todoStore } from '@/store/todoStore'
 import { Status } from '@/types/todo.interface'
 import { cn } from '@/utils/cn'
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
 interface Props {
 	className?: string
 }
@@ -23,6 +23,12 @@ export const AddNewTodo: React.FC<Props> = ({ className }) => {
 		setValue('')
 	}
 
+	const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === 'Enter') {
+			handleAddTodo()
+		}
+	}
+
 	const handleValue = (event: ChangeEvent<HTMLInputElement>) => {
 		setValue(event.target.value)
 	}
@@ -31,6 +37,7 @@ export const AddNewTodo: React.FC<Props> = ({ className }) => {
 			<Input
 				onChange={handleValue}
 				className={style.input}
+				onKeyDown={handleKeyDown}
 				placeholder='123'
 				value={value}
 			/>

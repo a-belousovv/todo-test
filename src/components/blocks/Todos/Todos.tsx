@@ -18,7 +18,7 @@ export const Todos: React.FC<Props> = ({ className }) => {
 
 	useEffect(() => {
 		setFilteredTodos(setTodosByFilter(todos, filterValue))
-	})
+	}, [todos, filterValue])
 	return (
 		<div className={cn(className, style.todos)}>
 			{filteredTodos?.map(todo => {
